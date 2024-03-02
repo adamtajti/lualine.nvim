@@ -44,6 +44,8 @@ function Buffer:get_props()
       dev, _ = require('nvim-web-devicons').get_icon('git')
     elseif self.filetype == 'vimwiki' then
       dev, _ = require('nvim-web-devicons').get_icon('markdown')
+    elseif self.filetype == 'norg' then
+      dev, _ = require('nvim-web-devicons').get_icon('org')
     elseif self.buftype == 'terminal' then
       dev, _ = require('nvim-web-devicons').get_icon('zsh')
     elseif vim.fn.isdirectory(self.file) == 1 then
